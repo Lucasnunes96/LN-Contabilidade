@@ -1,0 +1,212 @@
+/* styles.css */
+
+  /* Top Container */
+  .cs-top-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .cs-top-container.hidden {
+    display: none; /* Oculta o elemento quando a classe 'hidden' é adicionada */
+  }
+  
+  /* Contact Group */
+  .cs-contact-group {
+    display: flex; /* Make items flow horizontally */
+    gap: 20px; /* Add spacing between items */
+  }
+  
+  /* Contact Links */
+  .cs-contact-link {
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically align icon and text */
+    gap: 10px; /* Add spacing between icon and text */
+  }
+
+  .cs-info {
+    display: flex;
+    flex-direction: column; /* Muda a direção para coluna (vertical) */
+    align-items: flex-start; /* Alinha os itens ao início (esquerda) */
+    gap: 10px; /* Adiciona espaçamento vertical entre os itens */
+    margin-right: 100px;
+  }
+  
+  .cs-bottom-header {
+    text-decoration: none;
+    color: #A48728;
+    margin-left: 7px;
+  
+  }
+  
+  .cs-bottom-link-content{
+    color: #A48728;
+  
+  }
+    
+  /* Schedule Appointment Button */
+  .cs-button-solid {
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:linear-gradient(to bottom, #eae0c2 5%, #AC8E2A 100%);
+	background-color:#eae0c2;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#1A1A1A;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+  margin-right: 100px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.cs-button-solid:hover {
+	background:linear-gradient(to bottom, #ccc2a6 5%, #A48728 100%);
+	background-color:#ccc2a6;
+}
+.cs-button-solid:active {
+	position:static;
+	top:1px;
+}
+
+.cs-header {
+    color:#1A1A1A;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.cs-link-content {
+    color:#333029;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+    /* azul e sublinhado dos links*/
+a {
+    text-decoration: none;
+}
+
+    /* Existing button styles */
+
+.cs-icon {
+  position: relative; /* Para posicionar a frente e o verso */
+  transform-style: preserve-3d;
+  transition: transform 1s; /* Duração da animação do flip */
+}
+
+.front {
+  transform: rotateY(0deg); /* Posição inicial da frente */
+  backface-visibility: hidden; /* Esconde a parte de trás da frente */
+  background-color: #F6F3E9;
+  padding: 15px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  transform: rotateY(180deg); /* Posição inicial do verso */
+  backface-visibility: hidden; /* Esconde a parte de trás do verso */
+  background-color: #F6F3E9;
+  padding: 15px;
+}
+
+.cs-icon:hover {
+  transform: rotateY(180deg); /* Ao passar o mouse, vira para o verso */
+}
+
+.cs-bottom-bar{
+  background-color: #1A1A1A;
+  padding: 15px;
+  border-top: 15px solid white;
+  color:#000000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.cs-bottom-bar .cs-container {
+  display: flex;            /* Torna o container um flex container */
+  justify-content: space-between; /* Distribui os itens com espaço entre eles */
+  align-items: center;      /* Alinha os itens verticalmente ao centro */
+}
+
+.cs-bottom-bar .cs-ul {
+  display: flex;            /* Distribui os itens do menu horizontalmente */
+  list-style: none;         /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
+  gap: 20px;               /* Adiciona espaço entre os itens do menu */
+  margin-left: 75px;
+}
+
+
+/* Remove a margem do último item do menu */
+.cs-bottom-bar .cs-ul > li:last-child {
+  margin-right: 0; 
+}
+
+/* Estilos para o link do WhatsApp */
+.cs-bottom-bar .cs-call {
+  display: flex;            /* Alinha o ícone e o texto horizontalmente */
+  align-items: center;      /* Alinha o ícone e o texto verticalmente */
+  gap: 10px;
+}
+
+
+.cs-dropdown .cs-drop-ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.cs-dropdown:hover .cs-drop-ul,
+.cs-dropdown:focus .cs-drop-ul {
+  display: block;
+}
+
+.cs-drop-li {
+  padding: 8px 16px;
+}
+
+.cs-drop-li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.cs-drop-li a:hover {
+  background-color: #f1f1f1;
+}
+
+.cs-li-link {
+  color: #A48728;
+  text-decoration: none;
+}
+
+
+  
+  /* Responsiveness (Adjust as needed) */
+  @media (max-width: 768px) {
+    .cs-top-bar {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .cs-contact-group {
+      flex-direction: column; /* Stack contact items vertically */
+      align-items: flex-start; /* Align to the left */
+      margin-top: 10px; /* Add some top margin */
+    }
+    .cs-button-solid {
+      margin-top: 10px; /* Add top margin to the button */
+    }
+  }
+
+
+/* ... (outros estilos do cabeçalho) ... */
+
